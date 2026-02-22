@@ -39,7 +39,7 @@
       padding: 0 2rem;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER - PERFECTLY CENTERED (like iletisim.html) ===== */
     header {
       padding: 2rem 0 1.2rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -50,6 +50,8 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      width: 100%;
+      position: relative;
     }
 
     .logo {
@@ -82,7 +84,9 @@
       font-weight: 400;
       letter-spacing: 0.4px;
       text-transform: uppercase;
-      margin-left: auto; /* This helps push nav to the right */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .nav-links a {
@@ -104,7 +108,6 @@
       gap: 0.6rem;
       font-size: 0.85rem;
       color: #8a969c;
-      margin-left: 2rem; /* Adds space between nav and language */
     }
 
     .lang .active {
@@ -360,19 +363,19 @@
       margin: 1rem 0 1.5rem 0;
     }
 
-    .social-links {
+    .footer-col .social-links {
       display: flex;
       gap: 1.2rem;
       font-size: 1.3rem;
+    }
+
+    .footer-col .social-links a {
       color: #7c8e95;
-    }
-
-    .social-links i {
       transition: color 0.2s;
-      cursor: pointer;
+      text-decoration: none;
     }
 
-    .social-links i:hover {
+    .footer-col .social-links a:hover {
       color: #1e4b6b;
     }
 
@@ -434,20 +437,15 @@
 </head>
 <body>
 
-header>
+<header>
   <div class="container header-inner">
     <div class="logo">
-      <!-- GAMA logo (bigger) -->
       <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
-      
-      <!-- Yetkili Bayi text with blue border -->
       <span class="dealer-text">Yetkili Bayi</span>
     </div>
-
     <div class="nav-links">
       <a href="index.html">Ana Sayfa</a>
-      <!-- Hakkımızda navigation link with correct filename hakkimizda.html -->
-      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="hakkimizda.html" class="active">Hakkımızda</a>
       <a href="markalar.html">Markalar</a>
       <a href="iletisim.html">İletişim</a>
     </div>
@@ -460,7 +458,7 @@ header>
 
 <main>
   <div class="container">
-    <!-- Partner Logos (same clickable) -->
+    <!-- Partner Logos (clickable) -->
     <div class="partner-showcase">
       <div class="partner-item">
         <a href="https://avikus.ai/" target="_blank">
@@ -560,8 +558,8 @@ header>
         <p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p>
         <div class="social-links">
           <a href="https://www.linkedin.com/company/gama-denizcilik-ve-enerji-sistemleri?originalSubdomain=tr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -593,6 +591,7 @@ header>
     </div>
     <div class="copyright">
       <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
+      <span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span>
     </div>
   </div>
 </footer>
