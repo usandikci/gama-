@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMA · Markalar | Avikus & ZF Yetkili Bayii</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf9f7;
+      color: #1e2b2f;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* blue accent lines (gama blues) */
+    .blue-accent {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #1e4b6b 20%, #1e4b6b 80%, transparent 100%);
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ===== HEADER - PERFECTLY CENTERED ===== */
+    header {
+      padding: 2rem 0 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-img {
+      height: 70px;
+      width: auto;
+      display: block;
+    }
+
+    .dealer-text {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6e7c81;
+      border-left: 2px solid #1e4b6b;
+      padding-left: 0.8rem;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e2b2f;
+      transition: color 0.2s;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #1e4b6b;
+      border-bottom-color: #1e4b6b;
+    }
+
+    .lang {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: #8a969c;
+    }
+
+    .lang .active {
+      color: #1e2b2f;
+      font-weight: 500;
+      border-bottom: 1px solid #1e4b6b;
+    }
+
+    /* ===== MARKALAR HERO ===== */
+    .brands-hero {
+      margin: 3rem 0 2rem;
+    }
+
+    .brands-title {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 320;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #1e2b2f;
+    }
+
+    .brands-title em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: #1e4b6b;
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.8em;
+    }
+
+    /* ===== PARTNER LOGOS SECTION ===== */
+    .partner-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      margin: 2rem 0 2rem;
+      padding: 2rem 0;
+      border-top: 1px dashed rgba(30,75,107,0.3);
+      border-bottom: 1px dashed rgba(30,75,107,0.3);
+    }
+
+    .partner-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .partner-item a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .partner-item img {
+      height: 70px;
+      width: auto;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .partner-item img:hover {
+      opacity: 0.7;
+    }
+
+    .partner-item span {
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6e7c81;
+      margin-top: 0.5rem;
+      font-weight: 400;
+    }
+
+    /* ===== BRAND SECTIONS ===== */
+    .brand-section {
+      margin: 4rem 0;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo-large {
+      height: 80px;
+      width: auto;
+    }
+
+    .brand-header h2 {
+      font-size: 2.5rem;
+      font-weight: 320;
+      color: #1e2b2f;
+      border-left: 3px solid #1e4b6b;
+      padding-left: 1.5rem;
+    }
+
+    .brand-description {
+      background: white;
+      padding: 2.5rem;
+      box-shadow: 0 12px 28px -20px rgba(0,0,0,0.12);
+      border: 1px solid #f0efec;
+      margin-bottom: 2rem;
+    }
+
+    .brand-description p {
+      color: #58727b;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .brand-highlight {
+      color: #1e4b6b;
+      font-weight: 400;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .feature-item {
+      background: #f8fafb;
+      padding: 1.8rem;
+      border-radius: 8px;
+      border-left: 3px solid #1e4b6b;
+    }
+
+    .feature-item i {
+      color: #1e4b6b;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-item h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      color: #1e2b2f;
+    }
+
+    .feature-item p {
+      color: #58727b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Technology Tags */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .tech-tag {
+      background: #eef2f3;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: #1e4b6b;
+      font-weight: 400;
+      border: 1px solid rgba(30,75,107,0.2);
+    }
+
+    /* Product Cards */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .product-card {
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 12px 24px -16px rgba(20,40,50,0.08);
+      transition: transform 0.2s;
+      border: 1px solid #f0efec;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(30,75,107,0.3);
+    }
+
+    .product-icon {
+      font-size: 2.2rem;
+      color: #1e4b6b;
+      margin-bottom: 1.3rem;
+    }
+
+    .product-card h4 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1e2b2f;
+    }
+
+    .product-type {
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #8f9ea4;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 0.8rem;
+    }
+
+    .product-card p {
+      color: #58727b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* CTA Button */
+    .brand-cta {
+      text-align: right;
+      margin: 2rem 0;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      border: 1px solid #1e4b6b;
+      padding: 1rem 2.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #1e4b6b;
+      font-weight: 400;
+      transition: all 0.25s;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #1e4b6b;
+      color: white;
+    }
+
+    /* ===== CONTACT / QUOTE BANNER ===== */
+    .contact-banner {
+      background-color: #1e2b2f;
+      color: #ece3d8;
+      padding: 3rem 0;
+      margin: 3rem 0 2rem;
+    }
+
+    .banner-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .banner-content h2 {
+      font-weight: 300;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      max-width: 550px;
+    }
+
+    .banner-content h2 span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #1e4b6b;
+    }
+
+    .btn-outline-light {
+      border: 1px solid #1e4b6b;
+      color: #ece3d8;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 400;
+      transition: 0.2s;
+      background: transparent;
+    }
+
+    .btn-outline-light:hover {
+      background: #1e4b6b;
+      color: #1e2b2f;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 3rem 0 4rem 0;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+    }
+
+    .footer-col p {
+      color: #58727b;
+      font-size: 0.9rem;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .footer-col .social-links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.3rem;
+    }
+
+    .footer-col .social-links a {
+      color: #7c8e95;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #1e4b6b;
+    }
+
+    .footer-col h5 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      color: #1e2b2f;
+      font-weight: 500;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: #58727b;
+      font-weight: 300;
+    }
+
+    .footer-col ul li i {
+      color: #1e4b6b;
+      width: 1.4rem;
+    }
+
+    .copyright {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: #a1b2b8;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .features-grid,
+      .products-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .logo-img {
+        height: 55px;
+      }
+      .brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .partner-showcase {
+        gap: 2rem;
+      }
+      .partner-item img {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
+      <span class="dealer-text">Yetkili Bayi</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="markalar.html" class="active">Markalar</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+    <div class="lang">
+      <span class="active">TR</span>
+      <span>EN</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- Partner Logos -->
+    <div class="partner-showcase">
+      <div class="partner-item">
+        <a href="https://avikus.ai/" target="_blank">
+          <img src="IMG_3772.jpeg" alt="Avikus Logo">
+          <span>Yetkili Çözüm Ortağı</span>
+        </a>
+      </div>
+      <div class="partner-item">
+        <a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank">
+          <img src="IMG_3769.png" alt="ZF Logo">
+          <span>Marine Güç & Aktarma</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Brands Hero -->
+    <div class="brands-hero">
+      <div class="brands-title">
+        Markalar
+        <em>— dünya lideri teknolojiler, tek çatı altında</em>
+      </div>
+    </div>
+
+    <div class="blue-accent"></div>
+
+    <!-- AVIKUS SECTION -->
+    <div class="brand-section">
+      <div class="brand-header">
+        <img src="IMG_3772.jpeg" alt="Avikus Logo" class="brand-logo-large">
+        <h2>Avikus</h2>
+      </div>
+      
+      <div class="brand-description">
+        <p><span class="brand-highlight">Avikus, HD Hyundai Group'un bir iştiraki olarak</span> denizcilik endüstrisinde otonom ve yapay zeka tabanlı çözümler geliştiren dünya lideri bir teknoloji şirketidir. 2020 yılında kurulan Avikus, otonom denizcilik teknolojilerinde çığır açan yenilikler sunmaktadır.</p>
+        <p>Şirketin teknolojisi, <span class="brand-highlight">yapay zeka, sensör füzyonu ve gelişmiş kontrol algoritmalarını</span> bir araya getirerek gemilerin ve teknelerin daha güvenli, daha verimli ve daha akıllı bir şekilde seyretmesini sağlar. Avikus, otonom denizciliğin geleceğini şekillendiren öncü firmalardan biridir.</p>
+      </div>
+
+      <div class="tech-tags">
+        <span class="tech-tag">Yapay Zeka</span>
+        <span class="tech-tag">Otonom Seyir</span>
+        <span class="tech-tag">Sensör Füzyonu</span>
+        <span class="tech-tag">Derin Öğrenme</span>
+        <span class="tech-tag">Çarpışma Önleme</span>
+      </div>
+
+      <h3 style="font-size: 1.8rem; font-weight: 320; margin: 3rem 0 1.5rem; color: #1e2b2f;">Teknoloji Platformları</h3>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-ship"></i>
+          <h4>HiNAS (Akıllı Navigasyon Asistanı)</h4>
+          <p>Yapay zeka tabanlı seyir yardım sistemi. Geminin çevresini 360 derece algılar, çarpışma risklerini önceden hesaplar ve optimum rotayı belirler.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-robot"></i>
+          <h4>HiNAS Control</h4>
+          <p>Tam otonom seyir kontrolü. Belirlenen rotada hiçbir insan müdahalesi olmadan seyir, yanaşma ve manevra yapabilme yeteneği.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>HiMAS (Akıllı Bakım Sistemi)</h4>
+          <p>Gemi ekipmanlarının durumunu izleyen ve olası arızaları önceden tahmin eden yapay zeka tabanlı bakım asistanı.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.8rem; font-weight: 320; margin: 3rem 0 1.5rem; color: #1e2b2f;">Ürün Ailesi</h3>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-ship"></i></div>
+          <h4>Commercial Ship</h4>
+          <div class="product-type">Ticari Gemi Çözümleri</div>
+          <p>Konteyner gemileri, tankerler ve dökme yük gemileri için otonom seyir sistemleri. Yakıt verimliliğinde %8'e varan tasarruf, güvenlikte %60 iyileşme.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-sailboat"></i></div>
+          <h4>NeuBoat</h4>
+          <div class="product-type">Recreational Boat</div>
+          <p>Özel tekne sahipleri için geliştirilmiş yapay zeka tabanlı seyir ve yanaşma yardımı. 360° sensör teknolojisi ile çarpışmasız seyir.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-water"></i></div>
+          <h4>NeuDock</h4>
+          <div class="product-type">Otonom Yanaşma</div>
+          <p>Tam otomatik yanaşma sistemi. Rüzgar, akıntı ve dalga koşullarında dahi hassas ve güvenli yanaşma imkanı.</p>
+        </div>
+      </div>
+
+      <div class="brand-cta">
+        <a href="https://avikus.ai/" target="_blank" class="btn-outline">
+          <i class="fas fa-external-link-alt"></i> Avikus Resmi Web Sitesi
+        </a>
+      </div>
+    </div>
+
+    <div class="blue-accent"></div>
+
+    <!-- ZF MARINE SECTION -->
+    <div class="brand-section">
+      <div class="brand-header">
+        <img src="IMG_3769.png" alt="ZF Logo" class="brand-logo-large">
+        <h2>ZF Marine</h2>
+      </div>
+      
+      <div class="brand-description">
+        <p><span class="brand-highlight">ZF Friedrichshafen AG, 1915 yılında kurulmuş</span> dünyanın önde gelen otomotiv ve endüstriyel teknoloji tedarikçilerinden biridir. ZF Marine bölümü, 80 yılı aşkın süredir denizcilik endüstrisine güç aktarma, direksiyon ve kontrol sistemleri sağlamaktadır.</p>
+        <p>ZF'nin denizcilik çözümleri, <span class="brand-highlight">güvenilirlik, dayanıklılık ve yüksek performans</span> ile tanınır. Ticari gemilerden lüks yatlara, iş teknelerinden askeri gemilere kadar geniş bir yelpazede kullanılan ZF sistemleri, denizciliğin vazgeçilmez bileşenlerindendir.</p>
+      </div>
+
+      <div class="tech-tags">
+        <span class="tech-tag">Şanzıman</span>
+        <span class="tech-tag">Pod Drive</span>
+        <span class="tech-tag">Joystick Kontrol</span>
+        <span class="tech-tag">Aktarma Sistemleri</span>
+        <span class="tech-tag">Yakıt Verimliliği</span>
+      </div>
+
+      <h3 style="font-size: 1.8rem; font-weight: 320; margin: 3rem 0 1.5rem; color: #1e2b2f;">Ana Teknolojiler</h3>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-cogs"></i>
+          <h4>ZF Pod Drives</h4>
+          <p>Tam döner pod sistemleri, 360 derece manevra kabiliyeti, yakıt verimliliğinde %15'e varan iyileşme ve düşük titreşim seviyeleri.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-gear"></i>
+          <h4>Marine Transmissions</h4>
+          <p>50 BG'den 10.000 BG'ye kadar geniş güç aralığında mekanik ve elektronik kontrollü şanzımanlar. Yüksek dayanıklılık ve sessiz çalışma.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-joystick"></i>
+          <h4>ZF Joystick Control</h4>
+          <p>Tek elle hassas manevra imkanı. Motor, pod ve itici sistemleriyle tam entegrasyon. Yanaşma ve dar alan manevralarında üstün kontrol.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.8rem; font-weight: 320; margin: 3rem 0 1.5rem; color: #1e2b2f;">Öne Çıkan Ürünler</h3>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-cog"></i></div>
+          <h4>ZF 5000 Serisi</h4>
+          <div class="product-type">Ağır Hizmet Şanzımanları</div>
+          <p>Yüksek güçlü ticari gemiler ve hızlı feribotlar için geliştirilmiş şanzıman serisi. 5.000 BG'ye kadar güç kapasitesi.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-ship"></i></div>
+          <h4>ZF Pod 4000</h4>
+          <div class="product-type">Tam Döner Pod</div>
+          <p>Orta boy yatlar ve çalışma gemileri için pod sistemi. Yüksek manevra kabiliyeti ve yakıt verimliliği.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-gamepad"></i></div>
+          <h4>ZF SmartCommand</h4>
+          <div class="product-type">Entegre Kontrol Sistemi</div>
+          <p>Dokunmatik ekranlı, sezgisel kontrol sistemi. Motor, şanzıman ve itici sistemlerinin tek noktadan yönetimi.</p>
+        </div>
+      </div>
+
+      <div class="brand-cta">
+        <a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank" class="btn-outline">
+          <i class="fas fa-external-link-alt"></i> ZF Resmi Web Sitesi
+        </a>
+      </div>
+    </div>
+
+    <!-- Call to Action Banner -->
+    <div class="contact-banner">
+      <div class="container banner-content">
+        <h2>Avikus ve ZF çözümleri hakkında <span>detaylı bilgi ve teklif</span> için bizimle iletişime geçin.</h2>
+        <a href="iletisim.html" class="btn-outline-light"><i class="far fa-envelope"></i> Bize Ulaşın</a>
+      </div>
+    </div>
+
+    <!-- Contact Summary -->
+    <div style="margin: 2rem 0 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap; color: #4d6d76; justify-content: center;">
+      <div><i class="fas fa-phone-alt" style="color:#1e4b6b; margin-right:0.5rem;"></i> +90 212 993 42 62</div>
+      <div><i class="fas fa-map-pin" style="color:#1e4b6b; margin-right:0.5rem;"></i> Tuzla, İstanbul (Gemdok)</div>
+      <div><i class="fas fa-envelope" style="color:#1e4b6b; margin-right:0.5rem;"></i> info@gamadeniz.com</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/gama-denizcilik-ve-enerji-sistemleri?originalSubdomain=tr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Çözümler</h5>
+        <ul>
+          <li><i class="fas fa-chevron-right"></i> Avikus Commercial</li>
+          <li><i class="fas fa-chevron-right"></i> Avikus NeuBoat</li>
+          <li><i class="fas fa-chevron-right"></i> ZF Pod & Transmission</li>
+          <li><i class="fas fa-chevron-right"></i> ZF Kontrol Sistemleri</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Yetkili Servis</h5>
+        <ul>
+          <li><i class="fas fa-chevron-right"></i> Teknik Destek</li>
+          <li><i class="fas fa-chevron-right"></i> Yedek Parça</li>
+          <li><i class="fas fa-chevron-right"></i> Yazılım Güncelleme</li>
+          <li><i class="fas fa-chevron-right"></i> Eğitim & Demo</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Acil İrtibat</h5>
+        <ul>
+          <li><i class="fas fa-satellite-dish"></i> 7/24 Servis Hattı</li>
+          <li><i class="fas fa-wifi"></i> Uzaktan Destek</li>
+          <li><i class="fas fa-envelope"></i> info@gamadeniz.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
+      <span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
