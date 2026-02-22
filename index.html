@@ -25,7 +25,7 @@
       font-weight: 300;
     }
 
-    /* nautical / luxury detail – thin blue-accent lines (replaced gold) */
+    /* nautical / luxury detail – thin blue-accent lines */
     .blue-accent {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, #1e4b6b 20%, #1e4b6b 80%, transparent 100%);
@@ -39,7 +39,7 @@
       padding: 0 2rem;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== HEADER - PERFECTLY CENTERED (like iletisim.html) ===== */
     header {
       padding: 2rem 0 1.2rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -50,23 +50,22 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      width: 100%;
+      position: relative;
     }
 
-    /* logo block - image + dealer text */
     .logo {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
 
-    /* main GAMA logo - bigger */
     .logo-img {
       height: 80px;
       width: auto;
       display: block;
     }
 
-    /* dealer text (yetkili bayi) - blue border */
     .dealer-text {
       font-size: 0.85rem;
       letter-spacing: 2px;
@@ -80,11 +79,14 @@
 
     .nav-links {
       display: flex;
-      gap: 3rem;
+      gap: 2.5rem;
       font-size: 0.95rem;
       font-weight: 400;
       letter-spacing: 0.4px;
       text-transform: uppercase;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .nav-links a {
@@ -96,7 +98,8 @@
       padding-bottom: 4px;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: #1e4b6b;
       border-bottom-color: #1e4b6b;
     }
@@ -458,19 +461,19 @@
       display: none;
     }
 
-    .social-links {
+    .footer-col .social-links {
       display: flex;
       gap: 1.2rem;
       font-size: 1.3rem;
+    }
+
+    .footer-col .social-links a {
       color: #7c8e95;
-    }
-
-    .social-links i {
       transition: color 0.2s;
-      cursor: pointer;
+      text-decoration: none;
     }
 
-    .social-links i:hover {
+    .footer-col .social-links a:hover {
       color: #1e4b6b;
     }
 
@@ -540,16 +543,11 @@
 <header>
   <div class="container header-inner">
     <div class="logo">
-      <!-- GAMA logo (bigger) -->
       <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
-      
-      <!-- Yetkili Bayi text with blue border -->
       <span class="dealer-text">Yetkili Bayi</span>
     </div>
-
     <div class="nav-links">
-      <a href="index.html">Ana Sayfa</a>
-      <!-- Hakkımızda navigation link with correct filename hakkimizda.html -->
+      <a href="index.html" class="active">Ana Sayfa</a>
       <a href="hakkimizda.html">Hakkımızda</a>
       <a href="markalar.html">Markalar</a>
       <a href="iletisim.html">İletişim</a>
@@ -602,7 +600,7 @@
       </div>
     </div>
     
-    <!-- blue accent line (replaced gold) -->
+    <!-- blue accent line -->
     <div class="blue-accent"></div>
 
     <!-- Avikus solutions section -->
@@ -690,9 +688,9 @@
       <div class="footer-col">
         <p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p>
         <div class="social-links">
-        <a href="https://www.linkedin.com/company/gama-denizcilik-ve-enerji-sistemleri?originalSubdomain=tr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/gama-denizcilik-ve-enerji-sistemleri?originalSubdomain=tr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -724,8 +722,10 @@
     </div>
     <div class="copyright">
       <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
+      <span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span>
     </div>
   </div>
 </footer>
+
 </body>
 </html>
