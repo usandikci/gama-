@@ -39,7 +39,7 @@
       padding: 0 2rem;
     }
 
-    /* ===== HEADER - FIXED ALIGNMENT ===== */
+    /* ===== HEADER - PERFECTLY BALANCED ===== */
     header {
       padding: 2rem 0 1.2rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -84,7 +84,9 @@
       font-weight: 400;
       letter-spacing: 0.4px;
       text-transform: uppercase;
-      margin: 0 auto 0 0; /* Reset any margins */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .nav-links a {
