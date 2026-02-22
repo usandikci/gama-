@@ -52,48 +52,54 @@
       flex-wrap: wrap;
     }
 
-    /* logo block now holds image + text */
+    /* logo block now holds image + partner logos with gold separator */
     .logo {
       display: flex;
       align-items: center;
-      gap: 1.5rem; /* Increased gap for better spacing with larger logo */
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
-    /* logo image top-left - MADE BIGGER */
+    /* main GAMA logo - MADE BIGGER */
     .logo-img {
-      height: 80px; /* Increased from 54px to 80px */
+      height: 80px;
       width: auto;
       display: block;
     }
 
-    /* wrap text to keep your current typography */
-    .logo-text {
+    /* Gold separator line */
+    .logo-separator {
+      width: 2px;
+      height: 50px;
+      background-color: #b7a16b;
+      margin: 0 0.5rem;
+    }
+
+    /* partner logos container */
+    .partner-logos {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
 
-    .logo-main {
-      font-size: 2rem;
-      font-weight: 350;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #1e2b2f;
-      line-height: 1.1;
+    /* individual partner logo */
+    .partner-logo {
+      height: 50px;
+      width: auto;
+      display: block;
     }
 
-    .logo-main span {
-      font-weight: 600;
-      color: #b7a16b;
-    }
-
-    .logo-suffix {
+    /* distributor text next to partner logos */
+    .distributor-text {
       font-size: 0.75rem;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #6e7c81;
-      margin-top: 0.2rem;
+      margin-left: 0.5rem;
       border-left: 2px solid #b7a16b;
       padding-left: 0.6rem;
+      font-weight: 400;
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -158,7 +164,8 @@
       color: #1e2b2f;
     }
 
-    .hero-title i {
+    /* Line 1: Akıllı Çözümler - now using Playfair Display italic (same as Yetkili Çözümler) */
+    .hero-title .line1 {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-weight: 300;
@@ -167,6 +174,29 @@
       margin-top: 0.25rem;
       font-size: 0.9em;
       letter-spacing: 0;
+    }
+
+    /* Line 2: Yetkili Çözümler - using Playfair Display italic (same as line1) */
+    .hero-title .line2 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: #b7a16b;
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.9em;
+      letter-spacing: 0;
+    }
+
+    /* Line 3: — Avikus & ZF - using Inter */
+    .hero-title .line3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 350;
+      color: #1e2b2f;
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.7em;
+      letter-spacing: -0.02em;
     }
 
     .hero-text p {
@@ -503,10 +533,17 @@
         max-width: 100%;
       }
       .logo-img {
-        height: 60px; /* Slightly smaller on mobile but still larger than before */
+        height: 60px;
       }
-      .logo-main {
-        font-size: 1.6rem;
+      .partner-logo {
+        height: 35px;
+      }
+      .distributor-text {
+        font-size: 0.6rem;
+        white-space: normal;
+      }
+      .logo-separator {
+        height: 40px;
       }
     }
   </style>
@@ -516,11 +553,17 @@
 <header>
   <div class="container header-inner">
     <div class="logo">
-      <!-- The image file "IMG_3767.png" must be in the same folder as this HTML file -->
+      <!-- Main GAMA logo -->
       <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
 
-      <div class="logo-text">
-        <div class="logo-suffix">Avikus & ZF Marine · Türkiye Bayisi</div>
+      <!-- Gold separator between GAMA and partner logos -->
+      <div class="logo-separator"></div>
+
+      <!-- Partner logos: IMG_3769 for ZF, IMG_3772 for Avikus -->
+      <div class="partner-logos">
+        <img src="IMG_3772.png" alt="Avikus Logo" class="partner-logo">
+        <img src="IMG_3769.png" alt="ZF Logo" class="partner-logo">
+        <span class="distributor-text">Türkiye Bayisi</span>
       </div>
     </div>
 
@@ -545,7 +588,9 @@
       <div class="hero-grid">
         <div>
           <div class="hero-title">
-            Akıllı Denizcilik, <br>Yetkili Çözümler <i>— Avikus & ZF</i>
+            <span class="line1">Akıllı Çözümler,</span>
+            <span class="line2">Yetkili Çözümler</span>
+            <span class="line3">— Avikus & ZF</span>
           </div>
           <div class="hero-text">
             <p>Gama Denizcilik, Avikus yapay zeka destekli otonom sistemleri ve ZF marine teknolojilerinin Türkiye'deki yetkili bayisidir. Profesyonel filolar ve özel tekne sahipleri için en ileri çözümler.</p>
@@ -558,7 +603,7 @@
       </div>
     </div>
     
-    <!-- Distributor badges (Avikus & ZF) -->
+    <!-- Distributor badges (Avikus & ZF) - keeping these as placeholders -->
     <div class="distributor-logos">
       <div class="distributor-item">
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%23faf9f7'/%3E%3Ctext x='20' y='40' font-family='Inter' font-size='24' fill='%231e2b2f' font-weight='500'%3EAviKUS%3C/text%3E%3C/svg%3E" alt="Avikus logo placeholder">
@@ -693,7 +738,6 @@
     </div>
     <div class="copyright">
       <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
-  </div>
 </footer>
 </body>
 </html>
