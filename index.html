@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,10 +25,10 @@
       font-weight: 300;
     }
 
-    /* nautical / luxury detail – thin golden-accent lines */
-    .gold-accent {
+    /* nautical / luxury detail – thin blue-accent lines (replaced gold) */
+    .blue-accent {
       height: 1px;
-      background: linear-gradient(90deg, transparent 0%, #b7a16b 20%, #b7a16b 80%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, #1e4b6b 20%, #1e4b6b 80%, transparent 100%);
       width: 100%;
       margin: 2rem 0;
     }
@@ -66,13 +66,13 @@
       display: block;
     }
 
-    /* dealer text (yetkili bayi) */
+    /* dealer text (yetkili bayi) - blue border */
     .dealer-text {
       font-size: 0.85rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #6e7c81;
-      border-left: 2px solid #b7a16b;
+      border-left: 2px solid #1e4b6b; /* changed to blue */
       padding-left: 0.8rem;
       font-weight: 400;
       white-space: nowrap;
@@ -97,8 +97,8 @@
     }
 
     .nav-links a:hover {
-      color: #b7a16b;
-      border-bottom-color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
+      border-bottom-color: #1e4b6b; /* changed to blue */
     }
 
     .lang {
@@ -116,7 +116,7 @@
     .lang .active {
       color: #1e2b2f;
       font-weight: 500;
-      border-bottom: 1px solid #b7a16b;
+      border-bottom: 1px solid #1e4b6b; /* changed to blue */
     }
 
     /* ===== HERO ===== */
@@ -140,24 +140,24 @@
       color: #1e2b2f;
     }
 
-    /* Line 1: Akıllı Çözümler - Playfair italic gold */
+    /* Line 1: Akıllı Çözümler - Playfair italic blue */
     .hero-title .line1 {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-weight: 300;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       display: block;
       margin-top: 0.25rem;
       font-size: 0.9em;
       letter-spacing: 0;
     }
 
-    /* Line 2: Yetkili Çözümler - Playfair italic gold */
+    /* Line 2: Yetkili Çözümler - Playfair italic blue */
     .hero-title .line2 {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-weight: 300;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       display: block;
       margin-top: 0.25rem;
       font-size: 0.9em;
@@ -181,7 +181,7 @@
       margin: 1.5rem 0 2rem 0;
       max-width: 90%;
       font-weight: 300;
-      border-left: 2px solid #b7a16b;
+      border-left: 2px solid #1e4b6b; /* changed to blue */
       padding-left: 1.5rem;
     }
 
@@ -213,7 +213,7 @@
       align-items: flex-end;
       justify-content: flex-start;
       padding: 1.8rem;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231a3338"/><path d="M0,200 L400,160 L400,300 L0,300 Z" fill="%2300a7b5" opacity="0.25"/><circle cx="220" cy="100" r="40" fill="%23b7a16b" opacity="0.2"/><circle cx="280" cy="150" r="20" fill="%23f0f3f5" opacity="0.6"/><text x="140" y="210" fill="%23faf9f7" font-family="Arial" font-size="14" opacity="0.9">AI navigation</text></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231a3338"/><path d="M0,200 L400,160 L400,300 L0,300 Z" fill="%231e4b6b" opacity="0.25"/><circle cx="220" cy="100" r="40" fill="%231e4b6b" opacity="0.2"/><circle cx="280" cy="150" r="20" fill="%23f0f3f5" opacity="0.6"/><text x="140" y="210" fill="%23faf9f7" font-family="Arial" font-size="14" opacity="0.9">AI navigation</text></svg>');
       background-size: cover;
       background-position: center;
       color: white;
@@ -227,10 +227,10 @@
       font-size: 0.8rem;
       letter-spacing: 1px;
       color: #ece7db;
-      border-left: 3px solid #b7a16b;
+      border-left: 3px solid #1e4b6b; /* changed to blue */
     }
 
-    /* ===== PARTNER LOGOS UNDER HEADER ===== */
+    /* ===== PARTNER LOGOS UNDER HEADER (CLICKABLE) ===== */
     .partner-showcase {
       display: flex;
       flex-wrap: wrap;
@@ -239,8 +239,8 @@
       gap: 4rem;
       margin: 2rem 0 1rem 0;
       padding: 2rem 0;
-      border-top: 1px dashed rgba(183,161,107,0.3);
-      border-bottom: 1px dashed rgba(183,161,107,0.3);
+      border-top: 1px dashed rgba(30,75,107,0.3); /* changed to blue with opacity */
+      border-bottom: 1px dashed rgba(30,75,107,0.3); /* changed to blue with opacity */
     }
 
     .partner-item {
@@ -250,12 +250,23 @@
       text-align: center;
     }
 
+    .partner-item a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .partner-item img {
       height: 70px;
       width: auto;
-      /* No gold filter - original colors */
       opacity: 0.9;
       transition: opacity 0.2s;
+    }
+
+    .partner-item img:hover {
+      opacity: 0.7;
     }
 
     .partner-item span {
@@ -278,7 +289,7 @@
 
     .section-title em {
       font-family: 'Playfair Display', serif;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       font-style: italic;
       font-weight: 300;
     }
@@ -299,7 +310,7 @@
 
     .solution-icon {
       font-size: 2.5rem;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       margin-bottom: 1.2rem;
     }
 
@@ -350,7 +361,7 @@
 
     .card-icon {
       font-size: 2.2rem;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       margin-bottom: 1.3rem;
     }
 
@@ -403,11 +414,11 @@
     .banner-content h2 span {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
     }
 
     .btn-outline-light {
-      border: 1px solid #b7a16b;
+      border: 1px solid #1e4b6b; /* changed to blue */
       color: #ece3d8;
       padding: 1rem 2.5rem;
       text-decoration: none;
@@ -421,7 +432,7 @@
     }
 
     .btn-outline-light:hover {
-      background: #b7a16b;
+      background: #1e4b6b; /* changed to blue */
       color: #1e2b2f;
     }
 
@@ -460,7 +471,7 @@
     }
 
     .social-links i:hover {
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
     }
 
     .footer-col h5 {
@@ -484,7 +495,7 @@
     }
 
     .footer-col ul li i {
-      color: #b7a16b;
+      color: #1e4b6b; /* changed to blue */
       width: 1.4rem;
     }
 
@@ -532,7 +543,7 @@
       <!-- GAMA logo (bigger) -->
       <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
       
-      <!-- Yetkili Bayi text (added back) -->
+      <!-- Yetkili Bayi text with blue border -->
       <span class="dealer-text">Yetkili Bayi</span>
     </div>
 
@@ -552,15 +563,22 @@
 
 <main>
   <div class="container">
-    <!-- Partner Logos Section (Avikus & ZF with images) - NO GOLD FILTER -->
+    <!-- Partner Logos Section with clickable links -->
     <div class="partner-showcase">
+      <!-- Avikus logo linking to avikus.ai -->
       <div class="partner-item">
-        <img src="IMG_3772.jpeg" alt="Avikus Logo">
-        <span>Yetkili Çözüm Ortağı</span>
+        <a href="https://avikus.ai/" target="_blank" rel="noopener noreferrer">
+          <img src="IMG_3772.jpeg" alt="Avikus Logo">
+          <span>Yetkili Çözüm Ortağı</span>
+        </a>
       </div>
+      
+      <!-- ZF logo linking to zf.com -->
       <div class="partner-item">
-        <img src="IMG_3769.png" alt="ZF Logo">
-        <span>Marine Güç & Aktarma</span>
+        <a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank" rel="noopener noreferrer">
+          <img src="IMG_3769.png" alt="ZF Logo">
+          <span>Marine Güç & Aktarma</span>
+        </a>
       </div>
     </div>
 
@@ -584,7 +602,8 @@
       </div>
     </div>
     
-    <div class="gold-accent"></div>
+    <!-- blue accent line (replaced gold) -->
+    <div class="blue-accent"></div>
 
     <!-- Avikus solutions section -->
     <div class="section-title">
@@ -609,10 +628,10 @@
     </div>
 
     <div style="text-align: right; margin-top: -1rem;">
-      <a href="https://avikus.ai" target="_blank" style="color:#b7a16b; text-decoration:none; font-size:0.8rem;">avikus.ai <i class="fas fa-external-link-alt"></i></a>
+      <a href="https://avikus.ai" target="_blank" style="color:#1e4b6b; text-decoration:none; font-size:0.8rem;">avikus.ai <i class="fas fa-external-link-alt"></i></a>
     </div>
 
-    <div class="gold-accent"></div>
+    <div class="blue-accent"></div>
 
     <!-- ZF Marine systems section -->
     <div class="section-title">
@@ -641,11 +660,11 @@
     </div>
 
     <div style="text-align: right; margin-bottom: 2rem;">
-      <span style="font-size:0.7rem; color:#9bb0b8;"><i class="fas fa-check-circle" style="color:#b7a16b;"></i> Türkiye Yetkili Servis & Satış</span>
+      <span style="font-size:0.7rem; color:#9bb0b8;"><i class="fas fa-check-circle" style="color:#1e4b6b;"></i> Türkiye Yetkili Servis & Satış</span>
     </div>
 
     <div style="text-align: right; font-size: 0.75rem; color: #9bb0b8; margin: -1rem 0 2rem 0; letter-spacing: 1px;">
-      <i class="fas fa-globe" style="color: #b7a16b;"></i> Detaylı bilgi için <span style="border-bottom:1px dotted #b7a16b;">gamadeniz.com</span>
+      <i class="fas fa-globe" style="color: #1e4b6b;"></i> Detaylı bilgi için <span style="border-bottom:1px dotted #1e4b6b;">gamadeniz.com</span>
     </div>
   </div>
 
@@ -658,9 +677,9 @@
 
   <div class="container">
     <div style="margin: 3rem 0 1rem 0; display: flex; gap: 3rem; flex-wrap: wrap; color: #4d6d76; font-size: 0.9rem;">
-      <div><i class="fas fa-phone-alt" style="color: #b7a16b; margin-right: 0.5rem;"></i> +90 212 993 42 62</div>
-      <div><i class="fas fa-map-pin" style="color: #b7a16b; margin-right: 0.5rem;"></i> Aydıntepe Mahallesi, Güzin Sokak, No: 17/A6, 34947 (Gemdok), Tuzla, İstanbul</div>
-      <div><i class="fas fa-tools" style="color: #b7a16b; margin-right: 0.5rem;"></i> Servis & Yedek Parça</div>
+      <div><i class="fas fa-phone-alt" style="color: #1e4b6b; margin-right: 0.5rem;"></i> +90 212 993 42 62</div>
+      <div><i class="fas fa-map-pin" style="color: #1e4b6b; margin-right: 0.5rem;"></i> Aydıntepe Mahallesi, Güzin Sokak, No: 17/A6, 34947 (Gemdok), Tuzla, İstanbul</div>
+      <div><i class="fas fa-tools" style="color: #1e4b6b; margin-right: 0.5rem;"></i> Servis & Yedek Parça</div>
     </div>
   </div>
 </main>
@@ -679,31 +698,41 @@
       <div class="footer-col">
         <h5>Çözümler</h5>
         <ul>
-          <li><i class="fas fa-chevron-right"></i> Avikus Commercial</li>
-          <li><i class="fas fa-chevron-right"></i> Avikus NeuBoat</li>
-          <li><i class="fas fa-chevron-right"></i> ZF Pod & Transmission</li>
-          <li><i class="fas fa-chevron-right"></i> ZF Kontrol Sistemleri</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Avikus Commercial</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Avikus NeuBoat</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> ZF Pod & Transmission</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> ZF Kontrol Sistemleri</li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Yetkili Servis</h5>
         <ul>
-          <li><i class="fas fa-chevron-right"></i> Teknik Destek</li>
-          <li><i class="fas fa-chevron-right"></i> Yedek Parça</li>
-          <li><i class="fas fa-chevron-right"></i> Yazılım Güncelleme</li>
-          <li><i class="fas fa-chevron-right"></i> Eğitim & Demo</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Teknik Destek</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Yedek Parça</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Yazılım Güncelleme</li>
+          <li><i class="fas fa-chevron-right" style="color:#1e4b6b;"></i> Eğitim & Demo</li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Acil İrtibat</h5>
         <ul>
-          <li><i class="fas fa-satellite-dish"></i> 7/24 Servis Hattı</li>
-          <li><i class="fas fa-wifi"></i> Uzaktan Destek</li>
-          <li><i class="fas fa-envelope"></i> info@gamadeniz.com</li>
+          <li><i class="fas fa-satellite-dish" style="color:#1e4b6b;"></i> 7/24 Servis Hattı</li>
+          <li><i class="fas fa-wifi" style="color:#1e4b6b;"></i> Uzaktan Destek</li>
+          <li><i class="fas fa-envelope" style="color:#1e4b6b;"></i> info@gamadeniz.com</li>
         </ul>
       </div>
     </div>
     <div class="copyright">
       <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
+      <span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span>
+    </div>
+    <div style="margin-top: 1rem; font-size:0.7rem; color:#aabfc7; text-align:center;">Referans: avikus.ai | zf.com · Bu sayfa güncel bayi konseptidir</div>
+  </div>
+</footer>
+
+<!-- Floating hint with blue -->
+<div style="position: fixed; bottom: 20px; right: 20px; background: #ffffffcc; backdrop-filter: blur(6px); padding: 0.5rem 1rem; border-radius: 40px; font-size:0.7rem; color:#1e2b2f; border:1px solid #1e4b6b30;">
+  <i class="fas fa-handshake" style="color:#1e4b6b;"></i> Gama · Avikus & ZF Bayii
+</div>
 </body>
 </html>
