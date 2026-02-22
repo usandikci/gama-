@@ -11,12 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Inter', sans-serif;
       background-color: #faf9f7;
@@ -24,27 +19,22 @@
       line-height: 1.5;
       font-weight: 300;
     }
-
-    /* blue accent lines (gama blues) */
     .blue-accent {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, #1e4b6b 20%, #1e4b6b 80%, transparent 100%);
       width: 100%;
       margin: 2rem 0;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-
-    /* ===== HEADER - PERFECTLY CENTERED ===== */
+    /* ===== HEADER ===== */
     header {
       padding: 2rem 0 1.2rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-
     .header-inner {
       display: flex;
       justify-content: space-between;
@@ -53,19 +43,16 @@
       width: 100%;
       position: relative;
     }
-
     .logo {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
-
     .logo-img {
       height: 70px;
       width: auto;
       display: block;
     }
-
     .dealer-text {
       font-size: 0.85rem;
       letter-spacing: 2px;
@@ -76,7 +63,6 @@
       font-weight: 400;
       white-space: nowrap;
     }
-
     .nav-links {
       display: flex;
       gap: 2.5rem;
@@ -88,7 +74,6 @@
       left: 50%;
       transform: translateX(-50%);
     }
-
     .nav-links a {
       text-decoration: none;
       color: #1e2b2f;
@@ -96,31 +81,26 @@
       border-bottom: 1px solid transparent;
       padding-bottom: 4px;
     }
-
     .nav-links a:hover,
     .nav-links a.active {
       color: #1e4b6b;
       border-bottom-color: #1e4b6b;
     }
-
     .lang {
       display: flex;
       gap: 0.6rem;
       font-size: 0.85rem;
       color: #8a969c;
     }
-
     .lang .active {
       color: #1e2b2f;
       font-weight: 500;
       border-bottom: 1px solid #1e4b6b;
     }
-
     /* ===== İLETİŞİM HERO ===== */
     .contact-hero {
       margin: 3rem 0 2rem;
     }
-
     .contact-title {
       font-size: clamp(2.8rem, 6vw, 4.5rem);
       font-weight: 320;
@@ -128,7 +108,6 @@
       letter-spacing: -0.02em;
       color: #1e2b2f;
     }
-
     .contact-title em {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -138,7 +117,6 @@
       margin-top: 0.2rem;
       font-size: 0.8em;
     }
-
     /* ===== PARTNER LOGOS ===== */
     .partner-showcase {
       display: flex;
@@ -151,14 +129,12 @@
       border-top: 1px dashed rgba(30,75,107,0.3);
       border-bottom: 1px dashed rgba(30,75,107,0.3);
     }
-
     .partner-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
-
     .partner-item a {
       display: flex;
       flex-direction: column;
@@ -166,18 +142,15 @@
       text-decoration: none;
       color: inherit;
     }
-
     .partner-item img {
       height: 70px;
       width: auto;
       opacity: 0.9;
       transition: opacity 0.2s;
     }
-
     .partner-item img:hover {
       opacity: 0.7;
     }
-
     .partner-item span {
       font-size: 0.8rem;
       letter-spacing: 1.5px;
@@ -186,7 +159,6 @@
       margin-top: 0.5rem;
       font-weight: 400;
     }
-
     /* ===== İLETİŞİM GRID ===== */
     .contact-grid {
       display: grid;
@@ -194,18 +166,15 @@
       gap: 3rem;
       margin: 3rem 0 4rem;
     }
-
     .contact-info-card {
       background: white;
       padding: 2.5rem;
       box-shadow: 0 12px 28px -20px rgba(0,0,0,0.12);
       border: 1px solid #f0efec;
     }
-
     .info-section {
       margin-bottom: 2.5rem;
     }
-
     .info-section h3 {
       font-size: 1.4rem;
       font-weight: 400;
@@ -214,37 +183,31 @@
       border-left: 3px solid #1e4b6b;
       padding-left: 1rem;
     }
-
     .info-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
       margin-bottom: 1.2rem;
     }
-
     .info-item i {
       color: #1e4b6b;
       font-size: 1.2rem;
       width: 1.8rem;
       margin-top: 0.2rem;
     }
-
     .info-item p, .info-item a {
       color: #58727b;
       font-size: 1rem;
       text-decoration: none;
       transition: color 0.2s;
     }
-
     .info-item a:hover {
       color: #1e4b6b;
     }
-
     .working-hours {
       list-style: none;
       margin-top: 1rem;
     }
-
     .working-hours li {
       display: flex;
       justify-content: space-between;
@@ -252,32 +215,26 @@
       border-bottom: 1px dashed rgba(30,75,107,0.1);
       color: #58727b;
     }
-
     .working-hours li span:first-child {
       font-weight: 400;
       color: #1e2b2f;
     }
-
     .social-links-large {
       display: flex;
       gap: 1.5rem;
       margin-top: 1.5rem;
     }
-
     .social-links-large a {
       text-decoration: none;
       color: #7c8e95;
       transition: color 0.2s;
     }
-
     .social-links-large a i {
       font-size: 1.8rem;
     }
-
     .social-links-large a:hover {
       color: #1e4b6b;
     }
-
     /* ===== CONTACT FORM ===== */
     .contact-form-card {
       background: white;
@@ -285,69 +242,117 @@
       box-shadow: 0 12px 28px -20px rgba(0,0,0,0.12);
       border: 1px solid #f0efec;
     }
-
+    .form-header {
+      margin-bottom: 2rem;
+    }
+    .form-header h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #1e2b2f;
+      border-left: 3px solid #1e4b6b;
+      padding-left: 1rem;
+    }
+    .form-intro {
+      color: #58727b;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
     .form-group {
       margin-bottom: 1.5rem;
     }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #1e2b2f;
-      letter-spacing: 0.5px;
-    }
-
     .form-group input,
-    .form-group textarea,
-    .form-group select {
+    .form-group textarea {
       width: 100%;
-      padding: 0.8rem 1rem;
+      padding: 1rem;
       border: 1px solid #e0e4e5;
       background-color: #f9fbfc;
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #1e2b2f;
       transition: border-color 0.2s;
+      border-radius: 4px;
     }
-
     .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
+    .form-group textarea:focus {
       outline: none;
       border-color: #1e4b6b;
+      box-shadow: 0 0 0 3px rgba(30, 75, 107, 0.1);
     }
-
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #9bb0b8;
+      opacity: 0.7;
+    }
     .form-group textarea {
-      min-height: 120px;
+      min-height: 150px;
       resize: vertical;
     }
-
+    /* Honeypot spam protection */
+    .hidden-field {
+      display: none !important;
+    }
     .btn-submit {
-      background-color: transparent;
-      border: 1px solid #1e4b6b;
       padding: 1rem 2.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #1e4b6b;
-      font-weight: 500;
-      transition: all 0.25s;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn-submit:hover {
-      background-color: #1e4b6b;
+      background: #1e4b6b;
       color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: all 0.25s;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
-
+    .btn-submit:hover {
+      background: #2a5f84;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30, 75, 107, 0.2);
+    }
+    .btn-submit:disabled {
+      background: #9bb0b8;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .btn-submit i {
+      font-size: 1rem;
+    }
+    .thank-you-message {
+      background: linear-gradient(135deg, rgba(30, 75, 107, 0.05), rgba(42, 95, 132, 0.1));
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      text-align: center;
+      display: none;
+      border: 1px solid #1e4b6b;
+      animation: fadeIn 0.6s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .thank-you-message h4 {
+      color: #1e4b6b;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .thank-you-message p {
+      color: #58727b;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
     /* ===== MAP SECTION ===== */
     .map-section {
       margin: 3rem 0 4rem;
     }
-
     .map-container {
       background: #d8d5cf;
       height: 350px;
@@ -360,7 +365,6 @@
       justify-content: flex-start;
       padding: 1.8rem;
     }
-
     .map-caption {
       background: rgba(30,43,47,0.8);
       backdrop-filter: blur(3px);
@@ -369,41 +373,34 @@
       border-left: 3px solid #1e4b6b;
       font-size: 0.9rem;
     }
-
     /* ===== FOOTER ===== */
     footer {
       padding: 3rem 0 4rem 0;
       border-top: 1px solid rgba(0,0,0,0.05);
     }
-
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
       gap: 2rem;
     }
-
     .footer-col p {
       color: #58727b;
       font-size: 0.9rem;
       margin: 1rem 0 1.5rem 0;
     }
-
     .footer-col .social-links {
       display: flex;
       gap: 1.2rem;
       font-size: 1.3rem;
     }
-
     .footer-col .social-links a {
       color: #7c8e95;
       transition: color 0.2s;
       text-decoration: none;
     }
-
     .footer-col .social-links a:hover {
       color: #1e4b6b;
     }
-
     .footer-col h5 {
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -412,23 +409,19 @@
       color: #1e2b2f;
       font-weight: 500;
     }
-
     .footer-col ul {
       list-style: none;
     }
-
     .footer-col ul li {
       margin-bottom: 0.6rem;
       font-size: 0.9rem;
       color: #58727b;
       font-weight: 300;
     }
-
     .footer-col ul li i {
       color: #1e4b6b;
       width: 1.4rem;
     }
-
     .copyright {
       margin-top: 3rem;
       font-size: 0.75rem;
@@ -437,29 +430,16 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-
     @media (max-width: 800px) {
-      .contact-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-      .logo-img {
-        height: 55px;
-      }
-      .partner-showcase {
-        gap: 2rem;
-      }
-      .partner-item img {
-        height: 50px;
-      }
+      .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .logo-img { height: 55px; }
+      .partner-showcase { gap: 2rem; }
+      .partner-item img { height: 50px; }
     }
   </style>
 </head>
 <body>
-
 <header>
   <div class="container header-inner">
     <div class="logo">
@@ -478,173 +458,103 @@
     </div>
   </div>
 </header>
-
 <main>
   <div class="container">
-    <!-- Partner Logos (clickable) -->
     <div class="partner-showcase">
-      <div class="partner-item">
-        <a href="https://avikus.ai/" target="_blank">
-          <img src="IMG_3772.jpeg" alt="Avikus Logo">
-          <span>Yetkili Çözüm Ortağı</span>
-        </a>
-      </div>
-      <div class="partner-item">
-        <a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank">
-          <img src="IMG_3769.png" alt="ZF Logo">
-          <span>Marine Güç & Aktarma</span>
-        </a>
-      </div>
+      <div class="partner-item"><a href="https://avikus.ai/" target="_blank"><img src="IMG_3772.jpeg" alt="Avikus Logo"><span>Yetkili Çözüm Ortağı</span></a></div>
+      <div class="partner-item"><a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank"><img src="IMG_3769.png" alt="ZF Logo"><span>Marine Güç & Aktarma</span></a></div>
     </div>
-
-    <!-- Contact Hero -->
     <div class="contact-hero">
-      <div class="contact-title">
-        İletişim
-        <em>— size nasıl yardımcı olabiliriz?</em>
-      </div>
+      <div class="contact-title">İletişim<em>— size nasıl yardımcı olabiliriz?</em></div>
     </div>
-
     <div class="blue-accent"></div>
-
-    <!-- Contact Grid: Info + Form -->
     <div class="contact-grid">
       <!-- LEFT: Contact Information -->
       <div class="contact-info-card">
-        <div class="info-section">
-          <h3>Adres & İletişim</h3>
-          <div class="info-item">
-            <i class="fas fa-map-pin"></i>
-            <p>Aydıntepe Mahallesi, Güzin Sokak, No: 17/A6<br>34947 (Gemdok), Tuzla, İstanbul</p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone-alt"></i>
-            <a href="tel:+902129934262">+90 212 993 42 62</a>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:info@gamadeniz.com">info@gamadeniz.com</a>
-          </div>
+        <div class="info-section"><h3>Adres & İletişim</h3>
+          <div class="info-item"><i class="fas fa-map-pin"></i><p>Aydıntepe Mahallesi, Güzin Sokak, No: 17/A6<br>34947 (Gemdok), Tuzla, İstanbul</p></div>
+          <div class="info-item"><i class="fas fa-phone-alt"></i><a href="tel:+902129934262">+90 212 993 42 62</a></div>
+          <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:info@gamadeniz.com">info@gamadeniz.com</a></div>
         </div>
-
-        <div class="info-section">
-          <h3>Çalışma Saatleri</h3>
-          <ul class="working-hours">
-            <li><span>Pazartesi - Cuma</span> <span>09:00 - 18:00</span></li>
-            <li><span>Cumartesi</span> <span>10:00 - 14:00</span></li>
-            <li><span>Pazar</span> <span>Kapalı</span></li>
-          </ul>
-          <p style="margin-top: 1rem; color: #1e4b6b;"><i class="fas fa-clock"></i> 7/24 Acil Servis Hattı</p>
+        <div class="info-section"><h3>Çalışma Saatleri</h3>
+          <ul class="working-hours"><li><span>Pazartesi - Cuma</span><span>09:00 - 18:00</span></li><li><span>Cumartesi</span><span>10:00 - 14:00</span></li><li><span>Pazar</span><span>Kapalı</span></li></ul>
+          <p style="margin-top:1rem;color:#1e4b6b;"><i class="fas fa-clock"></i> 7/24 Acil Servis Hattı</p>
         </div>
-
-        <div class="info-section">
-          <h3>Bizi Takip Edin</h3>
+        <div class="info-section"><h3>Bizi Takip Edin</h3>
           <div class="social-links-large">
-            <a href="https://www.linkedin.com/company/gamadeniz" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/gamadenizcilik" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/gamadeniz" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/@gamadeniz" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/gamadeniz" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/gamadenizcilik" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/gamadeniz" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@gamadeniz" target="_blank"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
-
-      <!-- RIGHT: Contact Form -->
+      <!-- RIGHT: Contact Form - BRAND NEW WORKING FORMPREE -->
       <div class="contact-form-card">
-        <h3 style="font-size: 1.4rem; font-weight: 400; margin-bottom: 1.5rem; color: #1e2b2f; border-left: 3px solid #1e4b6b; padding-left: 1rem;">Hızlı Mesaj</h3>
-        <form>
-          <div class="form-group">
-            <label for="name">Adınız Soyadınız</label>
-            <input type="text" id="name" name="name" placeholder="Adınız Soyadınız">
-          </div>
-          <div class="form-group">
-            <label for="email">E-posta Adresiniz</label>
-            <input type="email" id="email" name="email" placeholder="ornek@email.com">
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefon Numaranız</label>
-            <input type="tel" id="phone" name="phone" placeholder="+90 555 123 45 67">
-          </div>
-          <div class="form-group">
-            <label for="subject">Konu</label>
-            <select id="subject" name="subject">
-              <option value="bilgi">Bilgi Talebi</option>
-              <option value="teklif">Teklif İsteği</option>
-              <option value="servis">Servis Desteği</option>
-              <option value="diger">Diğer</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Mesajınız</label>
-            <textarea id="message" name="message" placeholder="Detaylı mesajınız..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Gönder</button>
+        <div class="form-header"><h3>Hızlı Mesaj</h3><p class="form-intro">Sorularınız, fikirleriniz veya işbirliği için formu doldurun, en kısa sürede size dönüş yapalım.</p></div>
+        <form id="contactForm" action="https://formspree.io/f/mlddaveb" method="POST">
+          <div class="form-group"><input type="text" name="name" placeholder="Adınız Soyadınız" required></div>
+          <div class="form-group"><input type="email" name="email" placeholder="E-posta adresiniz" required></div>
+          <div class="form-group"><input type="tel" name="phone" placeholder="Telefon numaranız (isteğe bağlı)"></div>
+          <div class="form-group"><textarea name="message" placeholder="Mesajınız" rows="6" required></textarea></div>
+          <!-- Honeypot spam protection -->
+          <div class="hidden-field"><input type="text" name="_gotcha" style="display:none !important"></div>
+          <input type="hidden" name="_subject" value="GAMA İletişim Formu - Yeni Mesaj">
+          <button type="submit" class="btn-submit" id="submitBtn"><i class="fas fa-paper-plane"></i> Mesajı Gönder</button>
         </form>
+        <div id="thankYouMessage" class="thank-you-message"><h4>Teşekkür ederiz!</h4><p>Mesajınız tarafımıza ulaştı. En kısa sürede size dönüş yapacağız.</p></div>
       </div>
     </div>
-
-    <!-- Map Section -->
     <div class="map-section">
-      <div class="map-container">
-        <div class="map-caption">
-          <i class="fas fa-location-dot" style="color: #1e4b6b; margin-right: 0.5rem;"></i> 
-          Gemdok Tuzla · GAMA Denizcilik Ofisi
-        </div>
-      </div>
+      <div class="map-container"><div class="map-caption"><i class="fas fa-location-dot" style="color:#1e4b6b;margin-right:0.5rem;"></i> Gemdok Tuzla · GAMA Denizcilik Ofisi</div></div>
     </div>
-
-    <!-- Contact Summary (mobile friendly) -->
-    <div style="margin: 2rem 0 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap; color: #4d6d76; justify-content: center;">
-      <div><i class="fas fa-phone-alt" style="color:#1e4b6b; margin-right:0.5rem;"></i> +90 212 993 42 62</div>
-      <div><i class="fas fa-map-pin" style="color:#1e4b6b; margin-right:0.5rem;"></i> Tuzla, İstanbul (Gemdok)</div>
-      <div><i class="fas fa-envelope" style="color:#1e4b6b; margin-right:0.5rem;"></i> info@gamadeniz.com</div>
+    <div style="margin:2rem 0 3rem;display:flex;gap:2.5rem;flex-wrap:wrap;color:#4d6d76;justify-content:center;">
+      <div><i class="fas fa-phone-alt" style="color:#1e4b6b;margin-right:0.5rem;"></i> +90 212 993 42 62</div>
+      <div><i class="fas fa-map-pin" style="color:#1e4b6b;margin-right:0.5rem;"></i> Tuzla, İstanbul (Gemdok)</div>
+      <div><i class="fas fa-envelope" style="color:#1e4b6b;margin-right:0.5rem;"></i> info@gamadeniz.com</div>
     </div>
   </div>
 </main>
-
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col">
-        <p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/gamadeniz" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/gamadenizcilik" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/gamadeniz" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h5>Çözümler</h5>
-        <ul>
-          <li><i class="fas fa-chevron-right"></i> Avikus Commercial</li>
-          <li><i class="fas fa-chevron-right"></i> Avikus NeuBoat</li>
-          <li><i class="fas fa-chevron-right"></i> ZF Pod & Transmission</li>
-          <li><i class="fas fa-chevron-right"></i> ZF Kontrol Sistemleri</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Yetkili Servis</h5>
-        <ul>
-          <li><i class="fas fa-chevron-right"></i> Teknik Destek</li>
-          <li><i class="fas fa-chevron-right"></i> Yedek Parça</li>
-          <li><i class="fas fa-chevron-right"></i> Yazılım Güncelleme</li>
-          <li><i class="fas fa-chevron-right"></i> Eğitim & Demo</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Acil İrtibat</h5>
-        <ul>
-          <li><i class="fas fa-satellite-dish"></i> 7/24 Servis Hattı</li>
-          <li><i class="fas fa-wifi"></i> Uzaktan Destek</li>
-          <li><i class="fas fa-envelope"></i> info@gamadeniz.com</li>
-        </ul>
-      </div>
+      <div class="footer-col"><p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p><div class="social-links"><a href="https://www.linkedin.com/company/gamadeniz" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/gamadenizcilik" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/gamadeniz" target="_blank"><i class="fab fa-facebook"></i></a></div></div>
+      <div class="footer-col"><h5>Çözümler</h5><ul><li><i class="fas fa-chevron-right"></i> Avikus Commercial</li><li><i class="fas fa-chevron-right"></i> Avikus NeuBoat</li><li><i class="fas fa-chevron-right"></i> ZF Pod & Transmission</li><li><i class="fas fa-chevron-right"></i> ZF Kontrol Sistemleri</li></ul></div>
+      <div class="footer-col"><h5>Yetkili Servis</h5><ul><li><i class="fas fa-chevron-right"></i> Teknik Destek</li><li><i class="fas fa-chevron-right"></i> Yedek Parça</li><li><i class="fas fa-chevron-right"></i> Yazılım Güncelleme</li><li><i class="fas fa-chevron-right"></i> Eğitim & Demo</li></ul></div>
+      <div class="footer-col"><h5>Acil İrtibat</h5><ul><li><i class="fas fa-satellite-dish"></i> 7/24 Servis Hattı</li><li><i class="fas fa-wifi"></i> Uzaktan Destek</li><li><i class="fas fa-envelope"></i> info@gamadeniz.com</li></ul></div>
     </div>
-    <div class="copyright">
-      <span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span>
-      <span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span>
-    </div>
+    <div class="copyright"><span>© 2026 GAMA DENİZCİLİK – Yetkili Avikus & ZF Distribütörü</span><span>Elizya esintisiyle · Teknoloji ve Deniz <i class="fas fa-water" style="color:#1e4b6b;"></i></span></div>
   </div>
 </footer>
-
+<script>
+  const form = document.getElementById('contactForm');
+  const thankYou = document.getElementById('thankYouMessage');
+  const submitBtn = document.getElementById('submitBtn');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+      submitBtn.disabled = true;
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, { method: form.method, body: formData, headers: { 'Accept': 'application/json' } });
+        if (response.ok) {
+          form.reset();
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        alert("Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.");
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+</script>
 </body>
 </html>
