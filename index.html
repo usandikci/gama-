@@ -6,7 +6,7 @@
   <title>GAMA DENİZCİLİK • Avikus & ZF Authorized Dealer</title>
   <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: Inter + Playfair Display (similar to elizya's elegant sans‑serif / serif balance) -->
+  <!-- Google Fonts: Inter + Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
       font-weight: 300;
     }
 
-    /* nautical / luxury detail – thin golden‑accent lines */
+    /* nautical / luxury detail – thin golden-accent lines */
     .gold-accent {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, #b7a16b 20%, #b7a16b 80%, transparent 100%);
@@ -52,7 +52,22 @@
       flex-wrap: wrap;
     }
 
+    /* logo block now holds image + text */
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* logo image top-left */
+    .logo-img {
+      height: 54px;
+      width: auto;
+      display: block;
+    }
+
+    /* wrap text to keep your current typography */
+    .logo-text {
       display: flex;
       flex-direction: column;
     }
@@ -421,16 +436,9 @@
       margin: 1rem 0 1.5rem 0;
     }
 
+    /* REMOVED: .footer-logo-small and its gold span */
     .footer-logo-small {
-      font-size: 1.7rem;
-      letter-spacing: 2px;
-      font-weight: 350;
-      color: #1e2b2f;
-    }
-
-    .footer-logo-small span {
-      font-weight: 600;
-      color: #b7a16b;
+      display: none; /* this element is no longer used */
     }
 
     .social-links {
@@ -442,7 +450,7 @@
 
     .social-links i {
       transition: color 0.2s;
-      cursor: default;
+      cursor: pointer;
     }
 
     .social-links i:hover {
@@ -494,6 +502,12 @@
       .hero-text p {
         max-width: 100%;
       }
+      .logo-img {
+        height: 44px;
+      }
+      .logo-main {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
@@ -502,9 +516,15 @@
 <header>
   <div class="container header-inner">
     <div class="logo">
-      <div class="logo-main">GAMA <span>DENİZCİLİK</span></div>
-      <div class="logo-suffix">avikus & zf marine · türkiye distribütörü</div>
+      <!-- The image file "IMG_3767.png" must be in the same folder as this HTML file -->
+      <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
+
+      <div class="logo-text">
+        <div class="logo-main">GAMA <span>DENİZCİLİK</span></div>
+        <div class="logo-suffix">avikus & zf marine · türkiye distribütörü</div>
+      </div>
     </div>
+
     <div class="nav-links">
       <a href="#">ana sayfa</a>
       <a href="#">çözümler</a>
@@ -553,7 +573,7 @@
     
     <div class="gold-accent"></div>
 
-    <!-- Avikus solutions section (based on avikus.ai) -->
+    <!-- Avikus solutions section -->
     <div class="section-title">
       avikus <em>akıllı denizcilik</em>
     </div>
@@ -611,13 +631,11 @@
       <span style="font-size:0.7rem; color:#9bb0b8;"><i class="fas fa-check-circle" style="color:#b7a16b;"></i> türkiye yetkili servis & satış</span>
     </div>
 
-    <!-- additional reference to current website gamadeniz.com -->
     <div style="text-align: right; font-size: 0.75rem; color: #9bb0b8; margin: -1rem 0 2rem 0; letter-spacing: 1px;">
       <i class="fas fa-globe" style="color: #b7a16b;"></i> detaylı bilgi için <span style="border-bottom:1px dotted #b7a16b;">gamadeniz.com</span>
     </div>
-  </div> <!-- end container -->
+  </div>
 
-  <!-- full width banner / contact -->
   <div class="contact-banner">
     <div class="container banner-content">
       <h2>avikus ve zf çözümleri için <span>yetkili distribütör</span> – demostrate, satış, destek.</h2>
@@ -626,7 +644,6 @@
   </div>
 
   <div class="container">
-    <!-- footer preview / contact info -->
     <div style="margin: 3rem 0 1rem 0; display: flex; gap: 3rem; flex-wrap: wrap; color: #4d6d76; font-size: 0.9rem;">
       <div><i class="fas fa-phone-alt" style="color: #b7a16b; margin-right: 0.5rem;"></i> +90 212 993 42 62</div>
       <div><i class="fas fa-map-pin" style="color: #b7a16b; margin-right: 0.5rem;"></i> Aydıntepe Mahallesi,Güzin Sokak, No: 17/A6, 34947 (Gemdok), Tuzla, İstanbul</div>
@@ -639,12 +656,13 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-logo-small">GAMA <span>D</span></div>
+        <!-- the gold "GAMA D" text is now removed (footer-logo-small hidden) -->
+        <!-- only the description and social links remain -->
         <p>Avikus ve ZF Marine yetkili distribütörü. Profesyonel denizcilikte yapay zeka ve güvenilir aktarma çözümleri.</p>
         <div class="social-links">
-          <i class="fab fa-linkedin-in: GAMA Denizcilik ve Enerji Sistemleri Ltd."></i>
-          <i class="fab fa-instagram: @gamadenizcilik"></i>
-          <i class="fab fa-facebook: GAMA Deniz"></i>
+          <i class="fab fa-linkedin-in" title="LinkedIn - GAMA Denizcilik ve Enerji Sistemleri Ltd."></i>
+          <i class="fab fa-instagram" title="Instagram - @gamadenizcilik"></i>
+          <i class="fab fa-facebook" title="Facebook - GAMA Deniz"></i>
         </div>
       </div>
       <div class="footer-col">
@@ -678,12 +696,10 @@
       <span>© 2026 GAMA DENİZCİLİK – yetkili avikus & ZF distribütörü</span>
       <span>elizya esintisiyle · teknoloji ve deniz <i class="fas fa-water" style="color:#b7a16b;"></i></span>
     </div>
-    <!-- tiny homage to original site -->
     <div style="margin-top: 1rem; font-size:0.7rem; color:#aabfc7; text-align:center;">referans: avikus.ai | zf.com · bu sayfa güncel bayi konseptidir</div>
   </div>
 </footer>
 
-<!-- floating hint -->
 <div style="position: fixed; bottom: 20px; right: 20px; background: #ffffffcc; backdrop-filter: blur(6px); padding: 0.5rem 1rem; border-radius: 40px; font-size:0.7rem; color:#1e2b2f; border:1px solid #b7a16b30;">
   <i class="fas fa-handshake" style="color:#b7a16b;"></i> gama · avikus & zf bayii
 </div>
