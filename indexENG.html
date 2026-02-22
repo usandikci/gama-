@@ -1,1 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMA · Authorized Dealer for Avikus & ZF</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf9f7;
+      color: #1e2b2f;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* nautical / luxury detail – thin blue-accent lines */
+    .blue-accent {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #1e4b6b 20%, #1e4b6b 80%, transparent 100%);
+      width: 100%;
+      margin: 2rem 0;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ===== HEADER - PERFECTLY CENTERED ===== */
+    header {
+      padding: 2rem 0 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .dealer-text {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6e7c81;
+      border-left: 2px solid #1e4b6b;
+      padding-left: 0.8rem;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e2b2f;
+      transition: color 0.2s;
+      font-weight: 400;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #1e4b6b;
+      border-bottom-color: #1e4b6b;
+    }
+
+    .lang {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #8a969c;
+    }
+
+    .lang a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      padding: 0 0.2rem;
+    }
+
+    .lang a:hover {
+      color: #1e4b6b;
+    }
+
+    .lang .active {
+      color: #1e2b2f;
+      font-weight: 500;
+      border-bottom: 1px solid #1e4b6b;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      margin: 4rem 0 3rem 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 350;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #1e2b2f;
+    }
+
+    /* Line 1: Smart Solutions - Playfair italic blue */
+    .hero-title .line1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: #1e4b6b;
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.9em;
+      letter-spacing: 0;
+    }
+
+    /* Line 2: Authorized Solutions - Playfair italic blue */
+    .hero-title .line2 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: #1e4b6b;
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.9em;
+      letter-spacing: 0;
+    }
+
+    /* Line 3: — Avikus & ZF - Inter */
+    .hero-title .line3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 350;
+      color: #1e2b2f;
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.7em;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #44565c;
+      margin: 1.5rem 0 2rem 0;
+      max-width: 90%;
+      font-weight: 300;
+      border-left: 2px solid #1e4b6b;
+      padding-left: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: transparent;
+      border: 1px solid #1e2b2f;
+      padding: 0.9rem 2.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #1e2b2f;
+      font-weight: 500;
+      transition: all 0.25s;
+    }
+
+    .btn:hover {
+      background-color: #1e2b2f;
+      color: #faf9f7;
+      border-color: #1e2b2f;
+    }
+
+    .hero-image {
+      background: #d8d5cf;
+      height: 380px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 1.8rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231a3338"/><path d="M0,200 L400,160 L400,300 L0,300 Z" fill="%231e4b6b" opacity="0.25"/><circle cx="220" cy="100" r="40" fill="%231e4b6b" opacity="0.2"/><circle cx="280" cy="150" r="20" fill="%23f0f3f5" opacity="0.6"/><text x="140" y="210" fill="%23faf9f7" font-family="Arial" font-size="14" opacity="0.9">AI navigation</text></svg>');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .image-caption {
+      background: rgba(30,43,47,0.7);
+      backdrop-filter: blur(3px);
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      color: #ece7db;
+      border-left: 3px solid #1e4b6b;
+    }
+
+    /* ===== PARTNER LOGOS UNDER HEADER (CLICKABLE) ===== */
+    .partner-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      margin: 2rem 0 1rem 0;
+      padding: 2rem 0;
+      border-top: 1px dashed rgba(30,75,107,0.3);
+      border-bottom: 1px dashed rgba(30,75,107,0.3);
+    }
+
+    .partner-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .partner-item a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .partner-item img {
+      height: 70px;
+      width: auto;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .partner-item img:hover {
+      opacity: 0.7;
+    }
+
+    .partner-item span {
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6e7c81;
+      margin-top: 0.5rem;
+      font-weight: 400;
+    }
+
+    /* ===== SOLUTIONS (from Avikus) ===== */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 330;
+      letter-spacing: -0.3px;
+      margin-bottom: 1rem;
+      color: #1e2b2f;
+    }
+
+    .section-title em {
+      font-family: 'Playfair Display', serif;
+      color: #1e4b6b;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      margin: 3rem 0 1rem;
+    }
+
+    .solution-card {
+      background: white;
+      padding: 2.2rem;
+      box-shadow: 0 12px 28px -20px rgba(0,0,0,0.12);
+      border: 1px solid #f0efec;
+    }
+
+    .solution-icon {
+      font-size: 2.5rem;
+      color: #1e4b6b;
+      margin-bottom: 1.2rem;
+    }
+
+    .solution-card h3 {
+      font-size: 1.6rem;
+      font-weight: 330;
+      margin-bottom: 1rem;
+      color: #1e2b2f;
+    }
+
+    .solution-card p {
+      color: #58727b;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      background: #eef2f3;
+      padding: 0.3rem 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+      border-radius: 20px;
+      color: #2f4b55;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== ZF MARINE SYSTEMS ===== */
+    .zf-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .zf-card {
+      background-color: white;
+      padding: 2rem 1.8rem 2rem 1.8rem;
+      box-shadow: 0 12px 24px -16px rgba(20,40,50,0.08);
+      transition: transform 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .zf-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-icon {
+      font-size: 2.2rem;
+      color: #1e4b6b;
+      margin-bottom: 1.3rem;
+    }
+
+    .zf-card h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #1e2b2f;
+    }
+
+    .zf-card .system-type {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8f9ea4;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 0.8rem;
+    }
+
+    .zf-card p {
+      color: #3e555d;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+
+    /* ===== CONTACT / QUOTE BANNER ===== */
+    .contact-banner {
+      background-color: #1e2b2f;
+      color: #ece3d8;
+      padding: 3.5rem 0;
+      margin: 4rem 0 2rem 0;
+    }
+
+    .banner-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .banner-content h2 {
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+      max-width: 600px;
+    }
+
+    .banner-content h2 span {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #1e4b6b;
+    }
+
+    .btn-outline-light {
+      border: 1px solid #1e4b6b;
+      color: #ece3d8;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 400;
+      transition: 0.2s;
+      display: inline-block;
+      background: transparent;
+    }
+
+    .btn-outline-light:hover {
+      background: #1e4b6b;
+      color: #1e2b2f;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 3rem 0 4rem 0;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 2rem;
+    }
+
+    .footer-col p {
+      color: #58727b;
+      font-size: 0.9rem;
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    .footer-logo-small {
+      display: none;
+    }
+
+    .footer-col .social-links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.3rem;
+    }
+
+    .footer-col .social-links a {
+      color: #7c8e95;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #1e4b6b;
+    }
+
+    .footer-col h5 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      color: #1e2b2f;
+      font-weight: 500;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: #58727b;
+      font-weight: 300;
+    }
+
+    .footer-col ul li i {
+      color: #1e4b6b;
+      width: 1.4rem;
+    }
+
+    .copyright {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: #a1b2b8;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .solutions-grid, .zf-showcase, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-text p {
+        max-width: 100%;
+      }
+      .logo-img {
+        height: 60px;
+      }
+      .dealer-text {
+        font-size: 0.7rem;
+        white-space: normal;
+      }
+      .partner-showcase {
+        gap: 2rem;
+      }
+      .partner-item img {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="IMG_3767.png" alt="GAMA Denizcilik Logo" class="logo-img">
+      <span class="dealer-text">Authorized Dealer</span>
+    </div>
+    <div class="nav-links">
+      <a href="indexENG.html" class="active">Home Page</a>
+      <a href="aboutENG.html">About Us</a>
+      <a href="brandsENG.html">Brands</a>
+      <a href="contactENG.html">Contact</a>
+    </div>
+    <div class="lang">
+      <a href="index.html">TR</a>
+      <a href="indexENG.html" class="active">EN</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- Partner Logos Section with clickable links -->
+    <div class="partner-showcase">
+      <!-- Avikus logo linking to avikus.ai -->
+      <div class="partner-item">
+        <a href="https://avikus.ai/" target="_blank" rel="noopener noreferrer">
+          <img src="IMG_3772.jpeg" alt="Avikus Logo">
+          <span>Authorized Solution Partner</span>
+        </a>
+      </div>
+      
+      <!-- ZF logo linking to zf.com -->
+      <div class="partner-item">
+        <a href="https://www.zf.com/mobile/en/homepage/homepage.html" target="_blank" rel="noopener noreferrer">
+          <img src="IMG_3769.png" alt="ZF Logo">
+          <span>Marine Power & Transmission</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- hero section -->
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-title">
+            <span class="line1">Smart Solutions,</span>
+            <span class="line2">Authorized Solutions</span>
+            <span class="line3">— Avikus & ZF</span>
+          </div>
+          <div class="hero-text">
+            <p>Gama Denizcilik is the authorized dealer in Turkey for Avikus AI-powered autonomous systems and ZF marine technologies. We provide cutting-edge solutions for professional fleets and private boat owners.</p>
+            <a href="#" class="btn">Authorized Dealer</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-caption">Avikus AI · NeuBoat Docking</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- blue accent line -->
+    <div class="blue-accent"></div>
+
+    <!-- Avikus solutions section -->
+    <div class="section-title">
+      Avikus
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="solution-icon"><i class="fas fa-ship"></i></div>
+        <h3>Commercial Ship</h3>
+        <p>Autonomous solutions for fuel efficiency, safety, and fleet management. Voyage optimization and collision avoidance with Avikus AI.</p>
+        <span class="tech-tag">HiNAS</span>
+        <span class="tech-tag">8% Fuel Savings</span>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon"><i class="fas fa-sailboat"></i></div>
+        <h3>Recreational Boat</h3>
+        <p>NeuBoat series: AI-based navigation and docking assistance. Makes boating safer and easier with 360° sensor technology.</p>
+        <span class="tech-tag">Docking Assist</span>
+        <span class="tech-tag">360° Sensor</span>
+      </div>
+    </div>
+
+    <div style="text-align: right; margin-top: -1rem;">
+      <a href="https://avikus.ai" target="_blank" style="color:#1e4b6b; text-decoration:none; font-size:0.8rem;">avikus.ai <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div class="blue-accent"></div>
+
+    <!-- ZF Marine systems section -->
+    <div class="section-title">
+      ZF Marine
+    </div>
+
+    <div class="zf-showcase">
+      <div class="zf-card">
+        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+        <h4>ZF Pod Drives</h4>
+        <div class="system-type">Full-Rotating Pod</div>
+        <p>High maneuverability, fuel efficiency, and low vibration. Ideal for ferries, yachts, and workboats.</p>
+      </div>
+      <div class="zf-card">
+        <div class="card-icon"><i class="fas fa-gear"></i></div>
+        <h4>ZF Transmissions</h4>
+        <div class="system-type">Marine Transmission</div>
+        <p>Mechanical and electronically controlled transmissions from 360 HP to 4600 HP. Durability and quiet operation.</p>
+      </div>
+      <div class="zf-card">
+        <div class="card-icon"><i class="fas fa-joystick"></i></div>
+        <h4>ZF Joystick Control</h4>
+        <div class="system-type">Maneuvering System</div>
+        <p>Easy docking and precise control. Integrated with engines and pod systems, allowing one-hand maneuvering.</p>
+      </div>
+    </div>
+
+    <div style="text-align: right; margin-bottom: 2rem;">
+      <span style="font-size:0.7rem; color:#9bb0b8;"><i class="fas fa-check-circle" style="color:#1e4b6b;"></i> Turkey Authorized Service & Sales</span>
+    </div>
+
+    <div style="text-align: right; font-size: 0.75rem; color: #9bb0b8; margin: -1rem 0 2rem 0; letter-spacing: 1px;">
+      <i class="fas fa-globe" style="color: #1e4b6b;"></i> For more information <span style="border-bottom:1px dotted #1e4b6b;">gamadeniz.com</span>
+    </div>
+  </div>
+
+  <div class="contact-banner">
+    <div class="container banner-content">
+      <h2>For Avikus and ZF Solutions <span>Authorized Distributor</span> – Demo, Sales, Support.</h2>
+      <a href="#" class="btn-outline-light"><i class="far fa-envelope" style="margin-right: 0.5rem;"></i> Request Quote</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="margin: 3rem 0 1rem 0; display: flex; gap: 3rem; flex-wrap: wrap; color: #4d6d76; font-size: 0.9rem;">
+      <div><i class="fas fa-phone-alt" style="color: #1e4b6b; margin-right: 0.5rem;"></i> +90 212 993 42 62</div>
+      <div><i class="fas fa-map-pin" style="color: #1e4b6b; margin-right: 0.5rem;"></i> Aydıntepe Mahallesi, Güzin Sokak, No: 17/A6, 34947 (Gemdok), Tuzla, İstanbul, Turkey</div>
+      <div><i class="fas fa-tools" style="color: #1e4b6b; margin-right: 0.5rem;"></i> Service & Spare Parts</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p>Authorized distributor for Avikus and ZF Marine. AI and reliable transmission solutions in professional maritime.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/gama-denizcilik-ve-enerji-sistemleri?originalSubdomain=tr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/gamadenizcilik/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/gamadeniz/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 GAMA DENİZCİLİK – Authorized Avikus & ZF Distributor</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
