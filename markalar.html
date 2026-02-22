@@ -366,12 +366,92 @@
       color: white;
     }
 
-    /* ===== CONTACT / QUOTE BANNER ===== */
+    /* ===== YETKİ BELGELERİ SECTION ===== */
+    .certificates-section {
+      margin: 4rem 0;
+    }
+
+    .certificates-title {
+      font-size: 2rem;
+      font-weight: 330;
+      margin-bottom: 2rem;
+      color: #1e2b2f;
+    }
+
+    .certificates-title em {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #1e4b6b;
+      font-weight: 300;
+    }
+
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .certificate-card {
+      background: white;
+      border: 1px solid #f0efec;
+      box-shadow: 0 12px 24px -16px rgba(20,40,50,0.08);
+      transition: transform 0.2s;
+      overflow: hidden;
+    }
+
+    .certificate-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(30,75,107,0.3);
+    }
+
+    .certificate-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #f0efec;
+    }
+
+    .certificate-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .certificate-info h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1e2b2f;
+    }
+
+    .certificate-info p {
+      color: #58727b;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .certificate-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1e4b6b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .certificate-link:hover {
+      color: #2a5f84;
+    }
+
+    /* ===== CONTACT / QUOTE BANNER - LIGHTER BACKGROUND ===== */
     .contact-banner {
-      background-color: #1e2b2f;
-      color: #ece3d8;
+      background-color: #e5f0f8;  /* Lighter blue background */
+      color: #1e2b2f;  /* Darker text for contrast */
       padding: 3rem 0;
       margin: 3rem 0 2rem;
+      border-top: 1px solid rgba(30,75,107,0.2);
+      border-bottom: 1px solid rgba(30,75,107,0.2);
     }
 
     .banner-content {
@@ -387,6 +467,7 @@
       font-size: 1.8rem;
       letter-spacing: -0.5px;
       max-width: 550px;
+      color: #1e2b2f;
     }
 
     .banner-content h2 span {
@@ -397,7 +478,7 @@
 
     .btn-outline-light {
       border: 1px solid #1e4b6b;
-      color: #ece3d8;
+      color: #1e4b6b;
       padding: 1rem 2.5rem;
       text-decoration: none;
       letter-spacing: 2px;
@@ -410,7 +491,7 @@
 
     .btn-outline-light:hover {
       background: #1e4b6b;
-      color: #1e2b2f;
+      color: white;
     }
 
     /* ===== FOOTER ===== */
@@ -484,6 +565,7 @@
     @media (max-width: 800px) {
       .features-grid,
       .products-grid,
+      .certificates-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -698,7 +780,46 @@
       </div>
     </div>
 
-    <!-- Call to Action Banner -->
+    <!-- YETKİ BELGELERİ SECTION (ZF) -->
+    <div class="certificates-section">
+      <div class="certificates-title">
+        ZF <em>Yetki Belgelerimiz</em>
+      </div>
+      <div class="certificates-grid">
+        <div class="certificate-card">
+          <img src="ZF_Yetki Belgesi_2025-01.jpg" alt="ZF Yetki Belgesi 2025-01" class="certificate-image">
+          <div class="certificate-info">
+            <h4>ZF Yetki Belgesi 2025-01</h4>
+            <p>Yetkili Servis ve Distribütör</p>
+            <a href="ZF_Yetki Belgesi_2025-01.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-search-plus"></i> Büyüt
+            </a>
+          </div>
+        </div>
+        <div class="certificate-card">
+          <img src="ZF_Yetki Belgesi_2025-02.jpg" alt="ZF Yetki Belgesi 2025-02" class="certificate-image">
+          <div class="certificate-info">
+            <h4>ZF Yetki Belgesi 2025-02</h4>
+            <p>Yetkili Servis ve Distribütör</p>
+            <a href="ZF_Yetki Belgesi_2025-02.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-search-plus"></i> Büyüt
+            </a>
+          </div>
+        </div>
+        <div class="certificate-card">
+          <img src="ZF_Yetki Belgesi_2025-03.jpg" alt="ZF Yetki Belgesi 2025-03" class="certificate-image">
+          <div class="certificate-info">
+            <h4>ZF Yetki Belgesi 2025-03</h4>
+            <p>Yetkili Servis ve Distribütör</p>
+            <a href="ZF_Yetki Belgesi_2025-03.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-search-plus"></i> Büyüt
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Banner - Lighter Background -->
     <div class="contact-banner">
       <div class="container banner-content">
         <h2>Avikus ve ZF çözümleri hakkında <span>detaylı bilgi ve teklif</span> için bizimle iletişime geçin.</h2>
